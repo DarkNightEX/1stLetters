@@ -1,40 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>When You Miss Me</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
+    /* Base Styles */
     body {
-      font-family: Arial;
-      background: #fff0f5;
-      padding: 40px;
-      line-height: 1.6;
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #ffb3d9);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      color: #6a0dad; /* deep fuchsia for text */
+    }
+
+    .container {
+      background: #fff0f5cc; /* translucent lavender */
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(170, 0, 255, 0.2);
+      max-width: 600px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #d63384; /* bright fuchsia */
+      text-shadow: 1px 1px 5px rgba(214, 51, 132, 0.4);
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .btn-link {
+      display: inline-block;
+      margin: 10px 15px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(45deg, #ff33aa, #cc00ff);
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(204, 0, 255, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-link:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(204, 0, 255, 0.5);
+    }
+
+    /* Subtle fade-in animation */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Responsive */
+    @media(max-width: 650px){
+      .container {
+        padding: 30px 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-<h2>When you miss me 💌</h2>
+  <div class="container">
+    <h2>When you miss me 💌</h2>
 
-<p>
-I know the distance is hard :(, but please remember that my heart
-is always with you (real). Even when we’re far apart, you’re the first
-person I think of every day. (based on true story)
-</p>
+    <p>
+      I know the distance is hard :(, but please remember that my heart
+      is always with you ❤️. Even when we’re far apart, you’re the first
+      person I think of every day. (based on true story)
+    </p>
 
-<p>
-I can’t wait for the day I get to hold you instead of just missing you.
-</p>
+    <p>
+      I can’t wait for the day I get to hold you instead of just missing you.
+    </p>
 
-<p>Love, <br>— KinsaKahaKo</p>
+    <p>Love, <br>— KinsaKahaKo</p>
 
-<a href="choose.html" class="btn-link">Back 💕</a>
-<a href="index.html" class="btn-link">Home 🏠</a>
+    <a href="choose.html" class="btn-link">Back 💕</a>
+    <a href="index.html" class="btn-link">Home 🏠</a>
+  </div>
 
- 
-  
 </body>
 </html>
-
-
 
 
