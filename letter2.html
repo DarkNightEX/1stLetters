@@ -1,38 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>When You're Sad</title>
-  <style>
-    body {
-      font-family: Arial;
-      background: #f0f8ff;
-      padding: 40px;
-      line-height: 1.6;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romantic Hearts ✨</title>
+<style>
+  /* Body & background */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fce4ec; /* soft fuchsia theme */
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Container with semi-transparent background */
+  .container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 1;
+    backdrop-filter: blur(5px); /* soft blur behind text */
+  }
+
+  /* Glowing gradient heading */
+  h2 {
+    font-size: 3em;
+    background: linear-gradient(45deg, #ff79c6, #ff3cac, #ff6fcf, #ff8adf);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientGlow 5s ease infinite;
+    text-shadow: 0 0 10px #ff79c6, 0 0 20px #ff3cac, 0 0 30px #ff6fcf;
+    margin-bottom: 20px;
+  }
+
+  @keyframes gradientGlow {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  /* Heart styles */
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    transform: rotate(-45deg);
+    animation: floatUp linear infinite;
+    opacity: 0.8;
+  }
+
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+  }
+
+  .heart::before { top: -10px; left: 0; }
+  .heart::after { left: 10px; top: 0; }
+
+  @keyframes floatUp {
+    0% { transform: translateY(0) rotate(-45deg); opacity: 0.8;}
+    100% { transform: translateY(-120vh) rotate(-45deg); opacity: 0;}
+  }
+
+</style>
 </head>
 <body>
 
-<h2>When you're sad 💙</h2>
+<div class="container">
+  <h2>Love is in the Air 💖</h2>
+  <p>You are cherished, magical, and deeply loved.</p>
+</div>
 
-<p>
-Hey dear. If you're reading this (alangan kantahon), I just want you to know
-that your feelings are valid, and you're never weak for feeling this way. ayee
-</p>
+<!-- Generate multiple hearts -->
+<script>
+  const colors = ['#ff79c6', '#ff3cac', '#ff6fcf', '#ff8adf', '#ffb3d9'];
 
-<p>
-I believe in you more than you know. You are strong, beautiful,
-and deeply loved. (real)
-</p>
-
-<p>
-I'm always here for you, no matter the distance.
-</p>
-
-<p>— Always yours</p>
-
-<a href="choose.html" class="btn-link">Back 💕</a>
-<a href="index.html" class="btn-link">Home 🏠</a>
+  for(let i = 0; i < 30; i++){
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.width = heart.style.height = (10 + Math.random() * 30) + 'px';
+    heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+    heart.style.background = colors[Math.floor(Math.random() * colors.length)];
+    heart.style.zIndex = 0;
+    heart.style.opacity = 0.7 + Math.random() * 0.3;
+    heart.style.setProperty('--i', i);
+    document.body.appendChild(heart);
+  }
+</script>
 
 </body>
 </html>
